@@ -1,0 +1,390 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap');
+/*font-family: 'Rubik', sans-serif;*/
+
+:root {
+    /*Solid Colors*/
+    --pale-violet: hsl(276, 100%, 81%);
+    --moderate-violet: hsl(276, 55%, 52%);
+    --desaturated-dark-violet: hsl(271, 15%, 43%);
+    --grayish-blue: hsl(206, 6%, 79%);
+    --very-dark-desaturated-violet: hsl(271, 36%, 24%);
+    --dark-grayish-violet: hsl(270, 7%, 64%);
+    /*Gradients*/
+    --light-magenta: hsl(293, 100%, 63%);
+    --light-violet: hsl(264, 100%, 61%);
+    /*Secondary*/
+    --white: hsl(0, 0%, 100%);
+    --light-grayish-violet: hsl(270, 20%, 96%);
+    --very-light-magenta: hsl(289, 100%, 72%);
+    }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    }
+
+body {
+    font-family: 'Rubik', sans-serif;
+    background: var(--light-grayish-violet);
+    }
+
+img {
+    width: 50px;
+    height: 50px;
+
+    }
+
+/* Main Container*/
+#main-container:before {
+    content: '';
+    background: linear-gradient(to top, var(--light-violet), var(--light-magenta));
+    position: absolute;
+    top: 0px;
+    left: -20vw;
+    width: 700px;
+    height: 75vh;
+    border-bottom-right-radius: 1000px;
+    border-bottom-left-radius: 1000px;
+    z-index: -2;
+    }
+#main-container:after {
+    content: '';
+    background: var(--grayish-blue);
+    position: absolute;
+    bottom: 0px;
+    right: -20vw;
+    width: 700px;
+    height: 75vh;
+    border-top-right-radius: 1000px;
+    border-top-left-radius: 1000px;
+    z-index: -1;
+    opacity: 50%;
+    }
+
+#main-container {
+    position: relative;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    }
+
+@media (max-width: 500px) {
+    #main-container {
+        flex-direction: column;
+        height: 100%;
+        }
+    }
+
+/* CTA*/
+#main-container .cta {
+    width: 25%;
+    margin: 25px;
+    }
+
+@media (max-width: 500px) {
+    #main-container .cta {
+        width: 100%;
+        padding-right: 20px;
+        padding-left: 20px;
+        text-align: center;
+        margin-top: 0;
+        }
+    }
+
+#main-container .cta h2 {
+    color: var(--very-dark-desaturated-violet);
+    font-size: 1.9rem;
+    margin-bottom: 20px;
+    }
+
+#main-container .cta p {
+    color: var(--dark-grayish-violet);
+    }
+
+/* Phone Container*/
+#main-container .phone-container {
+    width: 375px;
+    height: 700px;
+    margin: 25px;
+    position: relative;
+    }
+
+@media (max-width: 500px) {
+    #main-container .phone-container {
+        height: 620px;
+        width: 320px;
+        }
+
+    }
+
+
+#main-container .phone-container {
+    background: var(--white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    font-size: 0.8rem;
+    }
+
+
+
+#main-container .phone-outline {
+    width: 100%;
+    height: 100%;
+    background: var(--light-grayish-violet);
+    }
+
+#main-container .phone-container,
+#main-container .phone-outline {
+    border-radius: 25px;
+    }
+
+/*Phone Header*/
+#main-container .phone-header {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    padding-top: 50px;
+    background: linear-gradient(to right, var(--light-violet), var(--light-magenta));
+
+    border-top-left-radius: inherit;
+    border-top-right-radius: inherit;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+
+    }
+@media (max-width: 500px) {
+    #main-container .phone-header {
+        padding-top: 30px;
+        }
+
+    }
+#main-container .phone-header i {
+    color: var(--white);
+    }
+
+#main-container .phone-header:before {
+    content: '';
+    background: var(--white);
+    position: absolute;
+    top: 0;
+    left: 25%;
+    right: 25%;
+    width: 50%;
+    height: 25%;
+    border-bottom-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+    }
+
+/*Profile*/
+#main-container .phone-header .profile {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 30px;
+    margin-left: 5px;
+    }
+#main-container .phone-header .profile h3 {
+    color: var(--white);
+    font-weight: normal;
+    }
+#main-container .phone-header .profile p {
+    color: var(--pale-violet);
+    }
+#main-container .phone-header .profile img {
+    justify-self: center;
+    grid-row: 1 / span 2;
+    border-radius: 50%;
+    border: var(--white) 1px solid;
+    margin-right: 10px;
+    width: 40px;
+    height: 40px;
+    }
+#main-container .profile-and-arrow {
+    display: flex;
+    align-items: center;
+    }
+
+/*Messenger and Message Cards*/
+#main-container .messenger {
+    display: flex;
+    flex-direction: column;
+    }
+
+#main-container .message-card {
+    background: var(--grayish-blue);
+    border-radius: 10px;
+    width: 60%;
+    padding: 10px;
+    margin: 10px;
+    }
+
+@media (max-width: 500px) {
+    #main-container .message-card p {
+        font-size: 0.6rem;
+        }
+
+    }
+
+#main-container .message-card p {
+    color: var(--moderate-violet);
+    }
+
+#main-container .right-msg {
+    justify-self: right;
+    align-self: end;
+    background: var(--white);
+    }
+#main-container .right-msg p {
+    color: var(--desaturated-dark-violet);
+    }
+#main-container .messenger .make-it {
+    width: fit-content;
+    }
+@media (max-width: 500px) {
+    #main-container .messenger .make-it {
+        margin-top: 0;
+        }
+    }
+
+/*Pictures*/
+#main-container .messenger .pictures {
+    margin-right: 10px;
+    margin-top: 5px;
+    background: inherit;
+    }
+
+#main-container .messenger .pictures img {
+    border-radius: 10px;
+    margin: 0px 3px;
+    }
+.attribution {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding-bottom: 20px;
+    }
+@media (max-width: 500px) {
+    .attribution {
+        position: relative;
+        }
+
+    }
+
+/*Price Cards*/
+#main-container .price-card {
+    display: flex;
+    background: linear-gradient(to left, var(--light-violet), var(--light-magenta));
+    width: 60%;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 15px;
+    height: 40px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    padding: 0px 20px;
+    }
+#main-container .price-card h6,
+#main-container .price-card h3 {
+    color: var(--white);
+    }
+
+#main-container .price-card-left {
+    display: flex;
+    align-items: center
+        }
+#main-container .price-card-left h6,
+#main-container .price-card-left h3 {
+    font-weight: normal;
+    }
+#main-container .price-card-left i {
+    margin: 0px 10px;
+    color: var(--white);
+    opacity: 75%;
+    font-weight: normal;
+    }
+
+/*Message Input*/
+#main-container .type-message {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px 20px;
+    padding: 0px 20px;
+    background: var(--white);
+    height: 40px;
+    border-radius: 25px;
+    }
+#main-container .type-message i {
+    font-size: 1.8rem;
+    }
+
+#main-container .type-message h6 {
+    opacity: 50%;
+    }
+
+/*attribution*/
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+/* ease in animations */
+#main-container .message-card,
+#main-container .picture,
+#main-container .price-card {
+    position: relative;
+    top: 10px;
+    opacity: 0;
+    }
+#main-container .message-card,
+#main-container .picture,
+#main-container .price-card{
+    animation: animate-message 0.5s ease-in forwards ;
+    }
+#main-container .message-card-two {
+    animation-delay: 1s;
+    }
+#main-container .picture-one {
+    animation-delay: 2s;
+    }
+#main-container .picture-two {
+    animation-delay: 2.5s;
+    }
+#main-container .picture-three {
+    animation-delay: 3s;
+    }
+#main-container .message-card-three {
+    animation-delay: 4s;
+    }
+#main-container .message-card-four {
+    animation-delay: 5s;
+    }
+#main-container .message-card-five {
+    animation-delay: 6s;
+    }
+#main-container .message-card-six {
+    animation-delay: 7s;
+    }
+#main-container .price-card-one {
+    animation-delay: 8s;
+    }
+#main-container .price-card-two {
+    animation-delay: 9s;
+    }
+
+@keyframes animate-message {
+    to {
+        top: 0px;
+        opacity: 100%;
+        }
+    }
+
+
+
