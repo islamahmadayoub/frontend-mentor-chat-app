@@ -24,7 +24,7 @@ Users should be able to:
 - **Bonus**: See the chat interface animate on the initial load, would be super awesome to have the typing effect added but perhaps in a future project.
 
 ### Screenshot
-![chat.png](..%2F..%2F..%2F..%2F..%2FDownloads%2Fchat.png)
+![chat.png](images%2Fchat.png)
 
 ### Links
 
